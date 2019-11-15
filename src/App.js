@@ -1,23 +1,17 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import Student from "./Student/student";
 
-function App() {
+function App(props) {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
         <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+          {props.class} van {props.name}.
+        </p> 
+        <Student studie="Anthropoligie" afgestudeerd="niet"> Een hier een extra zin. </Student>
+        <Student studie="Wiskunde" afgestudeerd="wel"> Nog een zin. </Student>
+        <Student studie="Geneeskunde" afgestudeerd="niet"> Ook hier een extra zin. </Student>
       </header>
     </div>
   );
